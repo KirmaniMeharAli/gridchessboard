@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox within Grid</title>
+  <style>
+    /* Grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 20px; /* space between grid items */
+      padding: 20px;
+    }
+
+    /* Individual grid items */
+    .grid-item {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+
+      /* Make the content inside the grid item a flexbox container */
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      justify-content: center; /* Center items vertically */
+      align-items: center; /* Center items horizontally */
+    }
+
+    .grid-item h3 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .grid-item p {
+      margin: 10px 0 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <h3>Item 1</h3>
+      <p>Flexbox content aligned.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Item 2</h3>
+      <p>Centered with Flexbox.</p>
+    </div>
+    <div class="grid-item">
+      <h3>Item 3</h3>
+      <p>Responsive and clean.</p>
+    </div>
+  </div>
+
+</body>
+</html>
